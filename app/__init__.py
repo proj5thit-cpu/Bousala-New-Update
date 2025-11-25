@@ -36,11 +36,10 @@ def create_app():
     # -----------------------
     # PostgreSQL configuration
     # -----------------------
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
-        "DATABASE_URL",
-        "postgresql://postgres:1234@localhost:5432/bousala"
-    )
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+   # PostgreSQL configuration
+   app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
+   app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 
     # -----------------------
     # Media upload settings
@@ -66,3 +65,4 @@ def create_app():
 
 
     return app
+
