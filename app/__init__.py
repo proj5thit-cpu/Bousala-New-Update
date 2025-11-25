@@ -36,9 +36,9 @@ def create_app():
     # -----------------------
     # PostgreSQL configuration
     # -----------------------
-   # PostgreSQL configuration
-   app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
-   app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    # PostgreSQL configuration
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
     # -----------------------
@@ -65,4 +65,5 @@ def create_app():
 
 
     return app
+
 
